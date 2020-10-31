@@ -1,0 +1,22 @@
+datadog:
+  collectEvents: true
+  env:
+  - name: DD_KUBELET_TLS_VERIFY
+    value: "false"
+  - name: DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL
+    value: "true"
+  - name: DD_KUBELET_CLIENT_CA
+    value: "/etc/kubernetes/certs/kubeletserver.crt"
+  leaderElection: true
+  logs:
+    enabled: true
+    containerCollectAll: true
+  processAgent:
+    enabled: true
+    processCollection: true
+clusterAgent:
+  enabled: true
+  admissionController:
+    enabled: true
+  metricsProvider:
+    enabled: true
