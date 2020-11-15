@@ -1,5 +1,10 @@
 datadog:
   collectEvents: true
+  apm:
+    enabled: true
+  dogstatsd:
+    nonLocalTraffic: true
+    useHostPort: true
   env:
   - name: DD_KUBELET_TLS_VERIFY
     value: "false"
