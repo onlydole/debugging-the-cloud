@@ -28,6 +28,14 @@ terraform {
       source  = "hashicorp/helm"
       version = "~> 1.3"
     }
+    datadog = {
+      source  = "datadog/datadog"
+      version = "~> 2.16"
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "~> 3.0"
+    }
   }
 
   required_version = "~> 0.13"
